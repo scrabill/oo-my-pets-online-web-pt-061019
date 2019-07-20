@@ -68,6 +68,26 @@ class Owner
     self.dogs.each do |dog|
       dog.mood = "nervous"
     end
+
+    # self.cats.each do |cat|
+    #   cat.owner.remove_instance_variable(:@name)
+    # end
+
+    self.remove_instance_variable(:@name)
+
+    # self.dogs.each do |dog|
+    #   dog.owner.remove_instance_variable(:@name)
+    # end
   end
+
+# shannon.remove_instance_variable(:@name) # remove_instance_variable removes the property and returns its value
+# 2.5.1 :134 > shannon.dogs.each do |dog|
+# 2.5.1 :135 >     puts dog.name
+# 2.5.1 :136?>   end
+# Hanna
+#  => [#<Dog:0x00007fa4ef050f50 @name="Hanna", @owner=#<Owner:0x00007fa4ef060810 @name="Shannon", @cats=[], @dogs=[...]>, @mood="nervous">]
+# 2.5.1 :137 > shannon.dogs.each do |dog|
+# 2.5.1 :138 >     puts dog.owner
+# 2.5.1 :139?>   end
 
 end
