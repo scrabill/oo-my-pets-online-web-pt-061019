@@ -72,6 +72,9 @@ class Owner
       # binding.pry
     end
 
+    self.cats = []
+    self.dogs = []
+
     # self.cats.each do |cat|
     #
     #   cat.mood = "nervous"
