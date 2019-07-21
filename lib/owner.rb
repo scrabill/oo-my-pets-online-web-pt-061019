@@ -102,7 +102,7 @@ class Owner
     binding.pry
     x = self.dogs.count
     y = self.cats.count
-    puts "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
+    puts "I have #{x} dog(s), and #{y} cat(s)."
   end
 
 # shannon.remove_instance_variable(:@name) # remove_instance_variable removes the property and returns its value
