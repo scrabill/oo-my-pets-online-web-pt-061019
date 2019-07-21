@@ -72,7 +72,7 @@ class Owner
       # binding.pry
     end
 
-    self.cats = []
+    self.cats = [] # self.dogs.clear would also work
     self.dogs = []
 
     # self.cats.each do |cat|
