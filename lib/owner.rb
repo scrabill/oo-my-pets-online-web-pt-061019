@@ -98,6 +98,9 @@ class Owner
     # end
   end
 
+  def list_pets
+  end
+
 # shannon.remove_instance_variable(:@name) # remove_instance_variable removes the property and returns its value
 # 2.5.1 :134 > shannon.dogs.each do |dog|
 # 2.5.1 :135 >     puts dog.name
