@@ -66,10 +66,14 @@ class Owner
     all_pets = self.cats + self.dogs
 
     all_pets.each do |pet|
-      # binding.pry
+
       pet.mood = "nervous"
       pet.owner = nil
+      # binding.pry
     end
+
+    self.cats = [] # self.dogs.clear would also work
+    self.dogs = []
 
     # self.cats.each do |cat|
     #
@@ -92,6 +96,13 @@ class Owner
     # self.dogs.each do |dog|
     #   dog.owner.remove_instance_variable(:@name)
     # end
+  end
+
+  def list_pets
+    # binding.pry
+    x = self.dogs.count
+    y = self.cats.count
+    "I have #{x} dog(s), and #{y} cat(s)."
   end
 
 # shannon.remove_instance_variable(:@name) # remove_instance_variable removes the property and returns its value
