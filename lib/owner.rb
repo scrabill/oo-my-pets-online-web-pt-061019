@@ -99,8 +99,8 @@ class Owner
   end
 
   def list_pets
-    self.dogs
-    puts "I have #{@owner.dogs.count} dog(s), and #{@owner.cats.count} cat(s)."
+
+    puts "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
   end
 
 # shannon.remove_instance_variable(:@name) # remove_instance_variable removes the property and returns its value
