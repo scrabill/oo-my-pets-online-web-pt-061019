@@ -100,6 +100,8 @@ class Owner
 
   def list_pets
     binding.pry
+    x = self.dogs.count
+    y = self.cats.count
     puts "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
   end
 
