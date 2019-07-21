@@ -1,3 +1,5 @@
+require "pry"
+
 class Owner
 
   attr_accessor :cats, :dogs, :mood
@@ -41,11 +43,11 @@ class Owner
   end
 
   def buy_cat(name)
-    Cat.new(name, owner = self)
+    Cat.new(name, self)
   end
 
   def buy_dog(name)
-    Dog.new(name, owner = self)
+    Dog.new(name, self)
   end
 
   def walk_dogs
@@ -61,19 +63,31 @@ class Owner
   end
 
   def sell_pets # T_T
-    self.cats.each do |cat|
-      cat.mood = "nervous"
+    all_pets = self.cats + self.dogs
+
+    all_pets.each do |pet|
+      # binding.pry
+      pet.mood = "nervous"
+      pet.owner = nil
     end
 
-    self.dogs.each do |dog|
-      dog.mood = "nervous"
-    end
+    # self.cats.each do |cat|
+    #
+    #   cat.mood = "nervous"
+    #   cat.owner = nil
+    # end
+    #
+    # self.dogs.each do |dog|
+    #   binding.pry
+    #   dog.mood = "nervous"
+    #   dog.owner = nil
+    # end
 
     # self.cats.each do |cat|
     #   cat.owner.remove_instance_variable(:@name)
     # end
 
-    self.remove_instance_variable(:@name)
+    # self.remove_instance_variable(:@name)
 
     # self.dogs.each do |dog|
     #   dog.owner.remove_instance_variable(:@name)
