@@ -69,7 +69,7 @@ class Owner
 
       pet.mood = "nervous"
       pet.owner = nil
-      binding.pry
+      # binding.pry
     end
 
     # self.cats.each do |cat|
